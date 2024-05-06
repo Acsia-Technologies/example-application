@@ -1,0 +1,21 @@
+# Copyright (c) 2021 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  self:
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: acsia
+      url-base: git@github.com:Acsia-Technologies
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+    - name: hal_nxp
+      remote: acsia
+      revision: main
+      path: module/hal/nxp
